@@ -12,7 +12,9 @@ class NoteService {
     }
 
     createNote(noteData) {
-        AppState.notes = [...AppState.notes, new Note(noteData)]
+        const newNote = new Note(noteData)
+        AppState.notes = [...AppState.notes, newNote]
+        this.setActiveNote(newNote.id)
         _saveNotes()
     }
 

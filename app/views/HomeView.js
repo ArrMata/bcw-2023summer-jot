@@ -11,7 +11,7 @@ export const HomeView = `
         <form onsubmit="app.NoteController.createNote(event)" class='d-flex align-items-end'>
             <input type='text' name='title' required minlength='3' maxlength='15' placeholder='Enter Note Title'>
             <input type='color' name='color' value='#dadada'>
-            <button type="submit" class="btn btn-success"><i class='mdi mdi-plus'></i></button>
+            <button type="submit"><i class='mdi mdi-plus'></i></button>
         </form>
       </div>
     </div>

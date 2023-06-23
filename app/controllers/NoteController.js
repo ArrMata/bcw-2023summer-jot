@@ -52,8 +52,10 @@ export class NoteController {
 
     saveActiveNote() {
         const newContent = document.getElementById('note-content').value
-        noteService.saveActiveNote(newContent)
-        Pop.success('Note has been saved!')
+        if (newContent != AppState.activeNote.content) {
+            noteService.saveActiveNote(newContent)
+            Pop.success('Note has been saved!')
+        }
     }
 
     async deleteNote() {

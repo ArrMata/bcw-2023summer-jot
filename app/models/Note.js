@@ -13,7 +13,7 @@ export class Note {
     get activeTemplate() {
         return `
         <section class="row note-container">
-            <div class="col-3 note-info">
+            <div class="col-3 note-info py-5">
                 <div class='note-header'>
                     <div class='color-indicator' style="background: ${this.color}"></div>
                     <h2>${this.title}</h2>
@@ -27,8 +27,8 @@ export class Note {
                 <textarea onblur="app.NoteController.saveActiveNote()" id='note-content'>${this.content}</textarea>
             </div>
 
-            <div class="col-1">
-                <button onclick="app.NoteController.deleteNote()">Delete</button>
+            <div class="col-1 py-5">
+                <button class='delete-button' onclick="app.NoteController.deleteNote()"><i class="mdi mdi-delete"></i></button>
             </div>
         </section>
         `
@@ -36,7 +36,12 @@ export class Note {
 
     get listTemplate() {
         return `
-        <li class='selectable' onclick="app.NoteController.setActiveNote('${this.id}')">${this.title}</h1>
+        <li class='rounded selectable' onclick="app.NoteController.setActiveNote('${this.id}')">
+            <div class='list-container'>
+                <div class='color-indicator' style="background: ${this.color}"></div> 
+                <h4>${this.title}</h4>
+            </div>
+        </li>
         `
     }
 
@@ -45,5 +50,6 @@ export class Note {
         const charCount = this.content.length
         return `${wordCount} Words, ${charCount} Characters.`
     }
+
 
 }
