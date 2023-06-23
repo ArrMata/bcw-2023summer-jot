@@ -1,3 +1,4 @@
+import { Note } from "./models/Note.js"
 import { Value } from "./models/Value.js"
 import { EventEmitter } from "./utils/EventEmitter.js"
 import { isValidProp } from "./utils/isValidProp.js"
@@ -8,6 +9,11 @@ class ObservableAppState extends EventEmitter {
 
   /** @type {import('./models/Value.js').Value[]} */
   values = loadState('values', [Value])
+
+  /** @type {import('./models/Note.js').Note[]} */
+  notes = loadState('notes', [Note])
+
+  activeNote = null
 
   // NOTE Used to load initial data
   init() {

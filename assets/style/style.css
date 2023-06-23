@@ -1,1 +1,66 @@
 /* BASIC STYLES HERE */
+
+body {
+    background-color: #22223b;
+}
+
+.offcanvas-notes {
+    background-color: #36364c;
+    color: white;
+}
+
+.img-container {
+    text-align: center;
+}
+
+.main-img {
+    position: relative;
+    right: 1vw;
+}
+
+.active-area {
+    height: 80dvh;
+}
+
+.note-container {
+    background-color: #36364c;
+    border: #9a8c98 solid .25rem;
+    border-radius: 1vw;
+    height: 100%;
+    padding: 2vh 2vw;
+}
+
+.note-header {
+    align-items: center;
+    display: flex;
+    height: 2rem;
+    margin-bottom: 1vw;
+}
+
+.note-writing {
+    padding-top: 5vh;
+}
+
+.note-writing textarea {
+    width: 80%;
+    height: 80%;
+    border-radius: 1vw;
+    padding: .5vh 1vw;
+    resize: none;
+}
+
+.color-indicator {
+    height: 100%;
+    width: 1vw;
+    border-radius: 100vw;
+    margin-right: .35vw;
+}
+
+#note-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#note-list li {
+    font-size: 1.5rem;
+}
